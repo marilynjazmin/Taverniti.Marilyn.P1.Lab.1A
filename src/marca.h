@@ -47,4 +47,6 @@ void mostrarMarcas(eMarca listaMarcas[], int tamM);
  */
 int validarIdMarca(eMarca listaMarcas[], int tamM, int id);
 
+int validarFecha(int dia, int mes, int anio);
+
 #endif /* MARCA_H_ */

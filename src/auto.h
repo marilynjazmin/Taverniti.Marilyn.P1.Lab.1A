@@ -9,6 +9,7 @@ typedef struct
 	int idMarca;
 	int idColor;
 	char caja;
+	int idCliente;
 	int isEmpty;
 }eAuto;
 
@@ -55,5 +56,6 @@ int buscarEspacioLibre(eAuto listaAutos[], int tamA);
  * @return devuelve la posición de ese ID si existe, 0 si no existe
  */
 int validarIdAuto(eAuto listaAutos[], int tamA , int id);
+
 
 #endif /* AUTO_H_ */

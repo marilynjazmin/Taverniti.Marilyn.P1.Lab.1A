@@ -25,4 +25,8 @@ void mostrarServicio(eServicio unServicio);
  */
 void mostrarServicios(eServicio listaServicios[], int tamS);
 
+int cargarDescripcionServicio(eServicio listaServicios[], int tamS, char descripcion[], int idDescripcion);
+
+int validarIdServicio(eServicio listaServicios[], int tamS, int id);
+
 #endif /* SERVICIO_H_ */

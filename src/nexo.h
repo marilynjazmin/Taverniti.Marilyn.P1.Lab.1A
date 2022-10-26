@@ -3,8 +3,11 @@
 #include "auto.h"
 #include "marca.h"
 #include "color.h"
+#include "trabajo.h"
+#include "servicio.h"
 #include "input.h"
 #include "menu.h"
+#include "cliente.h"
 
 /**
  * @fn void mostrarAuto(eAuto, eMarca[], int, eColor[], int)
@@ -16,7 +19,7 @@
  * @param listaColores vector de colores
  * @param tamC tamaño del vector colores
  */
-void mostrarAuto(eAuto unAuto, eMarca listaMarcas[], int tamM, eColor listaColores[], int tamC);
+void mostrarAuto(eAuto unAuto, eMarca listaMarcas[], int tamM, eColor listaColores[], int tamC, eCliente listaClientes[], int tamCliente);
 
 /**
  * @fn void mostrarAutos(eAuto[], int, eMarca[], int, eColor[], int)
@@ -29,7 +32,7 @@ void mostrarAuto(eAuto unAuto, eMarca listaMarcas[], int tamM, eColor listaColor
  * @param listaColores vector de colores
  * @param tamC tamaño del vector colores
  */
-void mostrarAutos(eAuto listaAutos[], int tamA, eMarca listaMarcas[], int tamM, eColor listaColores[], int tamC);
+void mostrarAutos(eAuto listaAutos[], int tamA, eMarca listaMarcas[], int tamM, eColor listaColores[], int tamC, eCliente listaClientes[], int tamCliente);
 
 /**
  * @fn int cargarAuto(eAuto*, eMarca[], int, eColor[], int)
@@ -71,7 +74,7 @@ int altaAuto(int* id, eAuto listaAutos[], int tamA, eMarca listaMarcas[], int ta
  * @param tamC tamaño del vector colores
  * @return 1 si realizó la función, 0 si no
  */
-int bajaAuto(eAuto listaAutos[], int tamA, eMarca listaMarcas[], int tamM, eColor listaColores[], int tamC);
+int bajaAuto(eAuto listaAutos[], int tamA, eMarca listaMarcas[], int tamM, eColor listaColores[], int tamC, eCliente listaClientes[], int tamCliente);
 
 /**
  * @fn int modificarAuto(eAuto[], int, eMarca[], int, eColor[], int)
@@ -85,7 +88,7 @@ int bajaAuto(eAuto listaAutos[], int tamA, eMarca listaMarcas[], int tamM, eColo
  * @param tamC tamaño del vector colores
  * @return 1 si realizó la función, 0 si no
  */
-int modificarAuto(eAuto listaAutos[], int tamA, eMarca listaMarcas[], int tamM, eColor listaColores[], int tamC);
+int modificarAuto(eAuto listaAutos[], int tamA, eMarca listaMarcas[], int tamM, eColor listaColores[], int tamC, eCliente listaClientes[], int tamCliente);
 
 /**
  * @fn int listarAutosPorMarca(eAuto[], int)
@@ -96,5 +99,31 @@ int modificarAuto(eAuto listaAutos[], int tamA, eMarca listaMarcas[], int tamM, 
  * @return devuelve 1 si realizó la función, 0 si no
  */
 int listarAutosPorMarca(eAuto listaAutos[], int tamA);
+
+void mostrarTrabajo(eTrabajo unTrabajo, eAuto listaAutos[], int tamA, eServicio listaServicios[], int tamS);
+
+void mostrarTrabajos(eTrabajo listaTrabajos[], int tamT, eAuto listaAutos[], int tamA, eServicio listaServicios[], int tamS);
+
+int cargarTrabajo(eTrabajo* unTrabajo, eAuto listaAutos[], int tamA, eMarca listaMarcas[], int tamM, eColor listaColores[], int tamC, eServicio listaServicios[], int tamS, eCliente listaClientes[], int tamCliente);
+
+int altaTrabajo(int* id, eTrabajo listaTrabajos[], int tamT, eAuto listaAutos[], int tamA, eMarca listaMarcas[], int tamM, eColor listaColores[], int tamC, eServicio listaServicios[], int tamS, eCliente listaClientes[], int tamCliente);
+
+int validarFecha(int dia, int mes, int anio);
+
+int mostrarAutosColor(eAuto listaAutos[], int tamA, eColor listaColores[], int tamC, eMarca listaMarcas[], int tamM, eCliente listaClientes[], int tamCliente);
+
+int mostrarAutosIdColor(int idColor, eAuto listaAutos[], int tamA, eColor listaColores[], int tamC, eMarca listaMarcas[], int tamM, eCliente listaClientes[], int tamCliente);
+
+int mostrarAutosMarca(eAuto listaAutos[], int tamA, eColor listaColores[], int tamC, eMarca listaMarcas[], int tamM, eCliente listaClientes[], int tamCliente);
+
+int mostrarAutosIdMarca(int idMarca, eAuto listaAutos[], int tamA, eColor listaColores[], int tamC, eMarca listaMarcas[], int tamM, eCliente listaClientes[], int tamCliente);
+
+int mostrarAutosTipoDeCaja(eAuto listaAutos[], int tamA, eColor listaColores[], int tamC, eMarca listaMarcas[], int tamM, eCliente listaClientes[], int tamCliente);
+
+int cantAutosPorColorYMarca(eAuto listaAutos[], int tamA, eColor listaColores[], int tamC, eMarca listaMarcas[], int tamM);
+
+int porcentajeAutosPorCaja(eAuto listaAutos[], int tamA, eColor listaColores[], int tamC, eMarca listaMarcas[], int tamM, eCliente listaClientes[], int tamCliente);
+
+int mostrarMarcaMasElegida(eAuto listaAutos[], int tamA, eColor listaColores[], int tamC, eMarca listaMarcas[], int tamM, eCliente listaClientes[], int tamCliente);
 
 #endif /* NEXO_H_ */

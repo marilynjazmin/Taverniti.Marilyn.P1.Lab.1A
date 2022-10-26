@@ -17,7 +17,13 @@ int menuPrincipal()
 	printf("G. LISTAR SERVICIOS\n");
 	printf("H. ALTA TRABAJO\n");
 	printf("I. LISTAR TRABAJOS\n");
-	printf("J. SALIR\n");
+	printf("J. MOSTRAR AUTOS DE UN COLOR A ELECCIÓN\n");
+	printf("K. MOSTRAR AUTOS DE UNA MARCA A ELECCIÓN\n");
+	printf("L. MOSTRAR PROMEDIO DE AUTOS CON CAJA MANUAL Y AUTOMÁTICA\n");
+	printf("M. MOSTRAR LISTADO DE AUTOS SEPARADOS POR TIPO DE CAJA\n");
+	printf("N. MOSTRAR CANTIDAD DE AUTOS DE UN COLOR Y MARCA A ELECCIÓN\n");
+	printf("O. MOSTRAR LA O LAS MARCAS MÁS ELEGIDAS\n");
+	printf("P. SALIR\n");
 	fflush(stdin);
 	scanf("%c", &opcion);
 
